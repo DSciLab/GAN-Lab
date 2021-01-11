@@ -2,7 +2,7 @@ from cfg import Opts
 import mlutils
 from mlutils import Log
 from torch.utils.data import DataLoader
-from nature_datasets import get_data
+from data import get_data
 from trainer import get_trainer
 from mlutils.metrics import *
 
@@ -45,8 +45,8 @@ if __name__ == '__main__':
     Opts.add_int('dashboard_port', 10010)
     Opts.add_int('dashboard_server', False)
     Opts.add_string('normalize', 'linear')
-    Opts.add_string('dataset', 'MNIST', 'dataset name')
-    Opts.add_string('trainer', 'VanillaGAN')
+    Opts.add_string('dataset', 'CELEBA', 'dataset name')
+    Opts.add_string('trainer', 'DCGAN')
 
     opt = Opts()
 

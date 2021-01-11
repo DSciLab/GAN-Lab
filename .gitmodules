@@ -4,3 +4,6 @@
 [submodule "mlutils"]
 	path = mlutils
 	url = git@github.com:DSciLab/mlutils.git
+[submodule "nature_datasets"]
+	path = nature_datasets
+	url = git@github.com:DSciLab/nature_datasets.git

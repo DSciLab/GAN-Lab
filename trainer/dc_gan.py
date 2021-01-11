@@ -5,14 +5,14 @@ from torch.nn import functional as F
 from torch.optim import Adam
 from torch.optim.lr_scheduler import MultiStepLR
 from mlutils import Trainer
-from networks.gan import vanilla
+from networks.gan import dcgan
 
 
-class VanillaGANTrainer(Trainer):
+class DCGANTrainer(Trainer):
     def __init__(self, opt):
         super().__init__(opt)
-        G = vanilla.Generator(opt)
-        D = vanilla.Discriminator(opt)
+        G = dcgan.Generator(opt)
+        D = dcgan .Discriminator(opt)
         self.G = self.to_gpu(G)
         self.D = self.to_gpu(D)
         self.optimizerG = Adam(G.parameters(), lr=opt.lr)
